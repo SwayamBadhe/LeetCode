@@ -22,10 +22,8 @@ class Solution {
         boolean[] row = new boolean[m];
         boolean[] col = new boolean[n];
         for (int i=0; i!=indices.length; i++) {
-            int rowVal = indices[i][0];
-            int colVal = indices[i][1];
-            row[rowVal] ^= true;
-            col[colVal] ^= true;
+            row[indices[i][0]] ^= true;
+            col[indices[i][1]] ^= true;
         }
 
         int r = 0, c = 0;
