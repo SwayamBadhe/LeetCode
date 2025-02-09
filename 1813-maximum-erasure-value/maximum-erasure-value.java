@@ -9,10 +9,10 @@ class Solution {
             int num = nums[i];
             if (numsMap.containsKey(num) && numsMap.get(num) >= minSoFar) {
                 int prev = numsMap.get(num);
-                for (int j=minSoFar; j<=prev; j++) {
-                    currSum -= nums[j];
+                while (minSoFar <= prev) {
+                    currSum -= nums[minSoFar];
                     minSoFar++;
-                }           
+                }            
             } 
             currSum += num;
             maxSum = Math.max(maxSum, currSum);
