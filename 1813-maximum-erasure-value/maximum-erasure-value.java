@@ -10,7 +10,7 @@ class Solution {
             if (numsMap.containsKey(num) && numsMap.get(num) >= minSoFar) {
                 int prev = numsMap.get(num);
                 for (int j=minSoFar; j<=prev; j++) {
-                    currSum -= nums[minSoFar];
+                    currSum -= nums[j];
                     minSoFar++;
                 }           
             } 
