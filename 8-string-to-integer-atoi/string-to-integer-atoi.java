@@ -6,11 +6,13 @@ class Solution {
         boolean sign = true;
         int start = 0;
 
-        if (s.charAt(0) == '-') {
+        if (s.length() > 0 && s.charAt(0) == '-') {
             sign = false;
             start = 1;
-        } else if (s.charAt(0) == '+') start = 1;
+        } else if (s.length() > 0 && s.charAt(0) == '+') start = 1;
         
+        if (s.length() <= start) return 0;
+
         for (int i=start; i!=s.length(); i++) {
             char c = s.charAt(i);
             if (!Character.isDigit(c)) break;
